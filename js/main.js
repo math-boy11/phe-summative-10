@@ -63,11 +63,11 @@ function preload() {
 
     //Loading screen logic
     var loadingText = this.add.text(400, 250, "Loading...", {
-        fontSize: "20px", fill: "#FFFFF"
+        fontSize: "20px", fill: "#FFF"
     }).setOrigin(0.5);
 
     var progressText = this.add.text(400, 300, "0%", {
-        fontSize: "18px", fill: "#FFFFF"
+        fontSize: "18px", fill: "#FFF"
     }
     ).setOrigin(0.5);
 
