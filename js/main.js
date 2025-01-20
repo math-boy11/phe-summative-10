@@ -60,6 +60,26 @@ function preload() {
     this.load.audio("holy_father", "assets/sound/music/holy_father.wav");
     this.load.audio("one_day_youll_be_cool", "assets/sound/music/one_day_youll_be_cool.wav");
     this.load.audio("soft_glow", "assets/sound/music/soft_glow.wav");
+
+    //Loading screen logic
+    var loadingText = this.add.text(400, 250, "Loading...", {
+        fontSize: "20px", fill: "#FFFFF"
+    }).setOrigin(0.5);
+
+    var progressText = this.add.text(400, 300, "0%", {
+        fontSize: "18px", fill: "#FFFFF"
+    }
+    ).setOrigin(0.5);
+
+    this.load.on("progress", function (value) {
+        progressText.setText(`${Math.round(value * 100)}%`);
+    });
+
+    this.load.on("complete", function () {
+        //Remove loading visuals when done
+        loadingText.destroy();
+        progressText.destroy();
+    });
 }
 
 function create() {
