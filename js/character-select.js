@@ -1,3 +1,5 @@
+var characterChosen;
+
 //Scene to select the character to play the game
 function characterSelect() {
     //Text
