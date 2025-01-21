@@ -1,4 +1,6 @@
 var cursors;
+var aKey;
+var dKey
 var player;
 var lava;
 var gameStarted = false;
@@ -38,6 +40,9 @@ function startGame() {
 
     //Make the cursor keys to check for arrow key presses
     cursors = scene.input.keyboard.createCursorKeys();
+    aKey = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
+    dKey = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
+
     gameStarted = true;
 
     //Make the group for the falling objects

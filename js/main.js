@@ -91,9 +91,9 @@ function create() {
 
 function update() {
     if (gameStarted) {
-        if (cursors.left.isDown) {
+        if (cursors.left.isDown || aKey.isDown) {
             player.setVelocityX(-350);
-        } else if (cursors.right.isDown) {
+        } else if (cursors.right.isDown || dKey.isDown) {
             player.setVelocityX(350);
         } else {
             player.setVelocityX(0);
