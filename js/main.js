@@ -23,7 +23,7 @@ var game = new Phaser.Game(config);
 var scene;
 var backgrounds = ["cave", "desert", "fall", "forest", "snow", "treetops", "upper_gym"];
 var balls = ["basket_ball", "beach_ball", "blue_bowling_ball", "red_bowling_ball", "purple_bowling_ball", "brown_baseball_ball", "yellow_baseball_ball", "minigolf_ball", "soccer_ball", "tennis_ball", "voleyball_ball"];
-var songs = ["a_winter_hymnal", "holy_father", "one_day_youll_be_cool", "soft_glow"]
+var songs = ["a_winter_hymnal", "holy_father", "one_day_you_cool", "soft_glow"]
 
 function preload() {
     //Backgrounds
@@ -54,12 +54,12 @@ function preload() {
     this.load.image("mrvoskamp", "assets/faces/mrvoskamp.png");
 
     //Sound/Music
-    this.load.audio("hit", "assets/sound/hit.wav");
-    this.load.audio("game_over", "assets/sound/game_over.wav");
-    this.load.audio("a_winter_hymnal", "assets/sound/music/a_winter_hymnal.wav");
-    this.load.audio("holy_father", "assets/sound/music/holy_father.wav");
-    this.load.audio("one_day_youll_be_cool", "assets/sound/music/one_day_youll_be_cool.wav");
-    this.load.audio("soft_glow", "assets/sound/music/soft_glow.wav");
+    this.load.audio("hit", "assets/sound/hit.mp3");
+    this.load.audio("game_over", "assets/sound/game_over.mp3");
+    this.load.audio("a_winter_hymnal", "assets/sound/music/a_winter_hymnal.mp3");
+    this.load.audio("holy_father", "assets/sound/music/holy_father.mp3");
+    this.load.audio("one_day_you_cool", "assets/sound/music/one_day_you_cool.mp3");
+    this.load.audio("soft_glow", "assets/sound/music/soft_glow.mp3");
 
     //Loading screen logic
     var loadingText = this.add.text(400, 250, "Loading...", {
@@ -104,3 +104,5 @@ function update() {
 document.querySelector("#fullscreen").addEventListener("click", function () {
     document.querySelector("canvas").requestFullscreen();
 });
+
+alert("Warning: This game has some weird issues depending on which browser you're using. For best results, try using Safari.")

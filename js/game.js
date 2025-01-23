@@ -166,6 +166,7 @@ function playMusic() {
     
     music.play();
 
+    //Play a different song when done
     music.once("complete", playMusic);
 }
 
